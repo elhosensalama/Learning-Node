@@ -1,0 +1,11 @@
+TAB           => span.tab
+Const         => span.const
+String        => span.string
+Function      => span.function
+Comment       => span.comment
+Counter       => span.editor-counter
+Library       => span.library-unused
+Used Library  => span.library-used
+Keyword       => span.keyword
+variable      => span.variable
+Used variable => span.variable-used

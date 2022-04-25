@@ -1,0 +1,120 @@
+main {
+    height: 100vh;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main>* {
+    margin: 15px 0;
+}
+
+main>i {
+    font-size: 75px;
+    margin: 0;
+    color: var(--orange);
+}
+
+main a {
+    color: var(--primary-color);
+}
+
+main .group {
+    display: flex;
+    width: 100%;
+    margin: 20px 0;
+}
+
+main .group:not(.remember) {
+    flex-direction: column;
+}
+
+main .group:not(.remember) label {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+main .group:not(.remember) input {
+    width: 400px;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #141724;
+    color: white;
+    border: 1px solid #62626f;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+main .group:not(.remember) input:focus {
+    outline: 1px solid #ddd;
+}
+
+main .group.remember {
+    margin: 30px 0;
+}
+
+main .group.remember input {
+    margin-right: 10px;
+    transform: scale(1.5);
+}
+
+main form {
+    flex-direction: column;
+}
+
+main form>input {
+    width: 430px;
+    font-size: 16px;
+    letter-spacing: 3px;
+    padding: 20px;
+    background: var(--primary-color);
+    border-radius: 10px;
+    border: none;
+}
+
+main>h3{
+    position: relative;
+}
+main>h3::before ,
+main>h3::after{
+    content: "";
+    display: block;
+    background-color: white;
+    width: 125px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+}
+
+main>h3::before {
+    right: 110%;
+}
+main>h3::after{
+    left: 110%;
+}
+
+main .icons {
+    margin: 25px 0;
+}
+
+main .icons i {
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 0 7px;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+main .icons i.facebook {
+    background-color: #1877f2;
+}
+main .icons i.whatsapp {
+    background-color: #107c10;
+}
+main .icons i.twitter {
+    background-color: #0049a0;
+}
+main .icons i.instagram {
+    background-color: #ff4747;
+}
+main .icons i.google-plus {
+    background-color: red;
+}

@@ -1,0 +1,46 @@
+## Blocking and Non-Blocking Asynchronous Nature of Node.
+
+@ What is the defferance between Synchronous and Asynchronous ?
+
+    - Synchronous
+
+        : is the way which the code execute line after line
+            if a process need time the execution stop
+            and wait the process to finsh so it's Blocking Style
+        -- Like
+            const fs = require("fs");
+            const input = fs.readFileSync('./txt/input.txt', 'utf-8');
+            console.log(input);
+
+    - Asynchronous
+
+        :  is the way which the code execute line after line
+            if a process need time the execution continue
+            and when the process is finshed it show its result
+            so it's Non-Blocking Style
+        -- Like
+            const fs = require("fs");
+            fs.readFile('./txt/input.txt', 'utf-8' , (err , data) => {
+                console.log(data);
+            }); 
+
+@ Why using Asynchronous is Recommended ?
+
+    - Becouse Node is a Single Thread
+        : which mean if a one user block the thread by a process all other users will have to wait him to finish
+        -- which give us 
+            : Non-Blocking I/O model
+            : Many Callback functions
+                But : Callbacks != Asynchronous
+                Give Us a problem: Callback Hell
+                Like
+                    fs.readFile('./txt/input.txt', 'utf-8' , (err , data1) => {
+                        fs.readFile('./txt/input.txt', 'utf-8' , (err , data2) => {
+                            fs.readFile('./txt/input.txt', 'utf-8' , (err , data3) => {
+                                fs.readFile('./txt/input.txt', 'utf-8' , (err , data4) => {
+                                    console.log(data1 + data2 + data3 + data4);
+                                }); 
+                            }); 
+                        }); 
+                    }); 
+                Solution : Using Promises or Async/Await 

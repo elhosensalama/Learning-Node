@@ -1,0 +1,9 @@
+## Install Node.JS
+
+1- Go To nodejs.org site.
+2- The Site will automaticly Select Your OS.
+3- Download the LTS (Long Term Support) version.
+4- The Recommended Version for Production is the Even Version.
+5- when Download is finished then Install Node
+6- to test if nodejs is Installed use this command
+    # node -v

@@ -1,0 +1,10 @@
+## Use Node for First Time.
+
+* Run Node in Terminal 
+    - Write | node | in Terminal
+    - then run any Simple Code
+        -- const name = "Jonas"
+        -- 7+3
+        -- _ (which hold the prevese Result)
+        -- console.log("Hello World");
+        -- TAB (to show Global Variables of Node)

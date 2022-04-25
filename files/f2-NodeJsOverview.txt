@@ -1,0 +1,30 @@
+## NodeJS Overview
+
+@ What is NodeJS ?
+
+    : NodeJS is a Javascript Runtime built on Google's open-source V8 Javascript Engine. (Simple NodeJS is Used to run Javascript Oustide the Browser using v8 Engine).
+
+@ Why you shoud use NodeJS ?
+
+    - NodeJS Make apps that is
+        -- Fast
+        -- Highly Scalable
+    - NodeJS is
+        -- Single-threaded
+        -- based on event driven , non-blocking I/O model
+    - Used in Big Compaines like
+        -- UBER
+        -- PayPal
+        -- Ebay
+    - Have A Huge open-sources packages like
+        -- NPM
+    - Very active Developer community
+
+@ When To use NodeJS?
+    - Use 
+        -- API with database behind it
+        -- Data Streaming (like YouTube)
+        -- Real-time chat Application
+        -- Server-side web Application
+    - Don't Use
+        -- Applications with Heavy Server-side Proccessing

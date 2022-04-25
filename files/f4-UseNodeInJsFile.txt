@@ -1,0 +1,18 @@
+## Use Node in a JS File.
+
+* Run Node in Terminal 
+    - make index.js file
+    - write Simpe Code
+        const hello = 'Hello World';
+        console.log(hello);
+    - write | node index.js | in Terminal
+    - Hello World will be Printed
+
+* Make a More Complex Program
+
+    - write the following Code
+        const fs = require('fs');
+        const repl = require('repl');
+    - as we see we used the | require | keyword form implement Node Libraries into Our Project
+    - fs stands for FileSystem
+    - REPL stands for Read-Eval-Print-Loop 

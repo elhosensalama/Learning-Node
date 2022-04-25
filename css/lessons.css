@@ -1,0 +1,635 @@
+.content {
+    padding: 100px 0;
+}
+
+.question {
+    margin: 20px 0;
+}
+
+.question .question-q,
+.qd,
+.q2d {
+    color: var(--orange);
+}
+
+.qd-c {
+    margin: 25px 0;
+}
+
+.q2d-c {
+    margin: 13px 0;
+    margin-left: 50px;
+}
+
+.question-answer {
+    margin: 20px;
+    margin-left: 50px;
+    line-height: 35px;
+}
+
+.question-answer ol li {
+    margin: 10px 0;
+    list-style: none;
+}
+
+.question-num {
+    /* border: 1px solid ; */
+    padding: 5px 10px;
+    background-color: var(--orange);
+    color: var(--nice-white);
+}
+
+.header-body {
+    position: relative;
+}
+
+.mover {
+    height: 100px;
+    bottom: 0;
+    position: absolute;
+    font-size: 40px;
+    color: white;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.mover a {
+    border: solid 1px #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    color: var(--orange);
+}
+
+.mover .middle-mover a {
+    padding: 8px 19px;
+    margin: 0;
+}
+
+.mover .middle-mover a.cur {
+    background-color: white;
+    color: var(--orange);
+}
+
+.mover .middle-mover a.big-num {
+    padding: 15px;
+    font-size: 70%;
+}
+
+a.not-active {
+    color: #888;
+    border: 1px solid #888;
+}
+
+a.link {
+    font-size: 115%;
+    color: var(--orange);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0px 10px;
+    border-radius: 50px;
+}
+
+.terminal {
+    width: 800px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid #000;
+    margin: 50px;
+    position: relative;
+}
+
+.terminal .terminal-head {
+    justify-content: space-between;
+    background-color: #222;
+    padding: 8px;
+}
+
+.terminal .terminal-head .icon-squre {
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+.terminal .terminal-head .floating-squre {
+    position: absolute;
+    color: #222;
+    right: 35.4px;
+    top: 17.9px;
+    font-size: 79%;
+}
+
+.terminal .terminal-body {
+    padding: 5px;
+    user-select: text;
+}
+
+.gray {
+    color: rgb(35, 29, 51);
+}
+
+.brown {
+    color: rgb(117, 43, 43);
+}
+
+.sol {
+    color: #4ec9b0;
+    font-size: 130%;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.editor {
+    width: 800px;
+    background-color: #1e1e1e;
+    border: 1px solid #000;
+    margin: 50px;
+    position: relative;
+}
+
+.editor .editor-head {
+    justify-content: space-between;
+    background-color: #222;
+    padding: 8px;
+}
+
+.editor .editor-head .middle-side {
+    width: 165px;
+    text-align: left;
+}
+
+.editor .editor-head .left-side {
+    margin-left: 10px;
+}
+
+.editor .editor-head .left-side i {
+    margin: 0 5px;
+}
+
+.editor .editor-head .left-side i:nth-of-type(1) {
+    color: red;
+}
+
+.editor .editor-head .left-side i:nth-of-type(2) {
+    color: yellow;
+}
+
+.editor .editor-head .left-side i:nth-of-type(3) {
+    color: green;
+}
+
+.editor .editor-body {
+    padding: 5px;
+    user-select: text;
+}
+
+.editor .editor-body .editor-counter {
+    width: 40px;
+    color: #858585;
+    display: inline-block;
+    padding-right: 20px;
+    text-align: right;
+    user-select: none;
+}
+
+.tab {
+    margin-left: 30px;
+}
+
+.editor .editor-body .red-treangle {
+    position: relative;
+}
+
+.editor .editor-body .red-treangle::before,
+.editor .editor-body .red-treangle::after {
+    content: "";
+    background-color: darkred;
+    width: 200px;
+    height: 10px;
+    left: -185px;
+    position: absolute;
+    border-radius: 50px;
+}
+
+.editor .editor-body .red-treangle::before {
+    top: -67px;
+    transform: rotate(50deg);
+}
+
+.editor .editor-body .red-treangle::after {
+    bottom: -67px;
+    transform: rotate(-50deg);
+}
+
+.editor .editor-body .comment {
+    color: #6a9955 !important;
+}
+
+.editor .editor-body .string {
+    color: #ce9178 ;
+}
+
+
+.editor .editor-body .const {
+    color: #4fc1ff;
+}
+
+.editor .editor-body .variable {
+    color: #9cdcfe;
+}
+
+.editor .editor-body .variable-unused {
+    color: #729cb3;
+}
+
+.editor .editor-body .function {
+    color: #bfd11d;
+    /* color: #dada9b; */
+}
+
+.editor .editor-body .keyword {
+    color: #569cd6;
+}
+
+.editor .editor-body .library-used {
+    color: #397e70;
+    color: #4ec9b0;
+}
+
+.editor .editor-body .library-unused {
+    color: #294740;
+    color: #3e907f;
+}
+
+.editor .editor-body .for {
+    color: #c586c0;
+}
+
+.editor .editor-body .number {
+    color: #b5cea8;
+}
+
+.editor .editor-body .function *{
+    color: #bfd11d ;
+}
+
+.editor .editor-body .string *{
+    color: #ce9178 ;
+}
+
+.editor .editor-body .variable *{
+    color: #9cdcfe;
+}
+
+
+
+
+
+/* slider */
+.slider {
+    height: 650px;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    position: relative;
+}
+
+.slider .backg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slider .backg .big {
+    height: 100%;
+    background-color: #ddd;
+    color: #000;
+    text-align: center;
+    width: 65%;
+    padding: 50px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.slider .backg .big .process {
+    min-width: 210px;
+    position: absolute;
+    left: -130px;
+    justify-content: space-between;
+}
+
+.slider .backg .big .process-1 {
+    top: 30%;
+}
+
+.slider .backg .big .process-2 {
+    top: 45%;
+}
+
+.slider .backg .big .process-3 {
+    top: 60%;
+}
+
+.slider .backg .big .process-4 {
+    top: 75%;
+}
+
+.slider .backg .big .process img {
+    width: 50px;
+    background-color: var(--nice-white);
+    border-radius: 50%;
+    border: 1px solid #294740;
+    padding: 1px;
+}
+
+.slider .backg .big .process span {
+    width: 150px;
+    height: 5px;
+    background-color: #222;
+    display: inline-block;
+}
+
+.slider .backg .big .process span::after {
+    content: "";
+    background-color: #222;
+    width: 25px;
+    height: 5px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    border-radius: 50px;
+    transform: rotate(45deg) translate(-5px, -10px);
+}
+
+.slider .backg .big .process span::before {
+    content: "";
+    background-color: #222;
+    width: 25px;
+    height: 5px;
+    position: absolute;
+    right: 0;
+    /* top: 50%; */
+    border-radius: 50px;
+    transform: rotate(-45deg) translate(-4px, 9px);
+}
+
+.slider #startSyncSlider,
+.slider #startAsyncSlider {
+    background-color: darkred;
+    color: white;
+    padding: 15px 17.5px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.2);
+    position: absolute;
+    top: 50%;
+    left: 46.5%;
+    z-index: 5;
+}
+
+.slider .backg .smalls {
+    height: 85%;
+    justify-content: space-between;
+}
+
+.slider .backg .small {
+    height: 100%;
+    background-color: var(--orange);
+    color: #000;
+    text-align: center;
+    width: 44%;
+    padding: 45px;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.slider * {
+    box-sizing: border-box
+}
+
+/* Slideshow container */
+.slider .slideshow-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.slider .mySlides2,
+.slider .mySlides {
+    height: 580px;
+    display: none;
+    position: relative;
+}
+
+.slider .mySlides2:first-of-type,
+.slider .mySlides:first-of-type {
+    display: block;
+}
+
+.slider .mySlides2 .blocked,
+.slider .mySlides .blocked {
+    background-color: rgb(179, 0, 0);
+    padding: 15px 50px;
+    border-radius: 50px;
+    position: absolute;
+    top: 56%;
+}
+
+.slider .mySlides2 .run-process,
+.slider .mySlides .run-process {
+    background-color: var(--primary-color);
+    padding: 5px 8px;
+    width: 130px;
+    display: inline-block;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    position: absolute;
+    top: 50%;
+    left: -40px;
+}
+
+.slider .mySlides2 .run-process-1,
+.slider .mySlides .run-process-1 {
+    top: 33%;
+}
+
+.slider .mySlides2 .run-process-1-plus,
+.slider .mySlides .run-process-1-plus {
+    left: 160px;
+    top: 30%;
+    position: relative;
+}
+
+.slider .mySlides2 .run-process-1-plus i,
+.slider .mySlides .run-process-1-plus i {
+    font-size: 30px;
+    position: absolute;
+    right: -45px;
+    top: 12px;
+}
+
+.slider .mySlides-5 .run-process:not(:first-of-type) {
+    background-color: rgb(70, 0, 0);
+}
+
+.slider .mySlides-4 .run-process-1-plus i,
+.slider .mySlides2.mySlides-7 .run-process-1-plus i,
+.slider .mySlides2.mySlides-8 .run-process-1-plus i,
+.slider .mySlides2.mySlides-9 .run-process-1-plus i {
+    animation: spin 1s infinite linear;
+}
+
+.slider .mySlides2 .run-process-2,
+.slider .mySlides .run-process-2 {
+    top: 50%;
+}
+
+.slider .mySlides-7 .run-process-2 {
+    left: 160px;
+    top: 30%;
+    position: relative;
+}
+
+.slider .mySlides2 .run-process-3,
+.slider .mySlides .run-process-3 {
+    top: 67%;
+}
+
+.slider .mySlides-8 .run-process-3 {
+    left: 160px;
+    top: 30%;
+    position: relative;
+}
+
+.slider .mySlides2 .run-process-4,
+.slider .mySlides .run-process-4 {
+    top: 84%;
+}
+
+
+.slider .mySlides-9 .run-process-4 {
+    left: 160px;
+    top: 30%;
+    position: relative;
+}
+
+.slider .mySlides2.mySlides-3 .run-process-1,
+.slider .mySlides2.mySlides-7 .run-process-1,
+.slider .mySlides2.mySlides-8 .run-process-1,
+.slider .mySlides2.mySlides-9 .run-process-1,
+.slider .mySlides2.mySlides-4 .run-process-1 {
+    left: 510px;
+    top: 27%;
+    position: relative;
+}
+
+.slider .mySlides2.mySlides-7 .run-process-2,
+.slider .mySlides2.mySlides-8 .run-process-3,
+.slider .mySlides2.mySlides-9 .run-process-4 {
+    left: 22px;
+    top: 30%;
+    position: relative;
+}
+
+/* Next & previous buttons */
+.slider .prev,
+.slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.slider .prev:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.slider .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.slider .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.slider .dot2,
+.slider .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #444;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.slider .active,
+.slider .dot2:hover,
+.slider .dot:hover {
+    background-color: #717171;
+}
+
+.slider .dot2.active,
+.slider .dot.active {
+    background-color: var(--orange);
+}
+
+/* Fading animation */
+.slider .fade {
+    animation-name: fade;
+    animation-duration: .5s;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* slider End */

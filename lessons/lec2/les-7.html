@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Learning NodeJS</title>
+        <link rel="stylesheet" href="../../css/icofont.min.css" />
+        <link rel="stylesheet" href="../../css/style.css" />
+        <link rel="stylesheet" href="../../css/navbar.css" />
+        <link rel="stylesheet" href="../../css/lectures.css" />
+        <link rel="stylesheet" href="../../css/lessons.css" />
+        <link rel="shortcut icon" href="#" type="image/x-icon" />
+        <script defer src="../../js/script.js"></script>
+        <script defer src="../../js/editor.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="container center">
+                    <a class="logo" href="/">
+                        <div class="center">
+                            <i class="icofont-bird"></i>
+                            <h1><span class="orangee">N</span>odeJS</h1>
+                        </div>
+                    </a>
+                    <ul class="center">
+                        <li><a href="/#article">Lectures</a></li>
+                        <li><a href="/#questions">Questions</a></li>
+                        <li><a href="/#contact-us">Contact Us</a></li>
+                        <li><a href="/about-us.html">About Us</a></li>
+                        <li><a href="/login.html">login</a></li>
+                        <li>
+                            <a href="/signup.html"><button class="orangee">Sign Up</button></a>
+                        </li>
+                        <li class="search-box">
+                            <form action="" method="post">
+                                <input type="text" placeholder="search" class="squize" />
+                                <i class="icofont-search"></i>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="header-body center">
+                <h1 class="heading-primary">
+                    <a href="/lectures/lec2.html" class="btn-white">Introduction to NodeJS and NPM</a>
+                    <br />
+                    <br />
+
+                    Lesson 7
+                    <br />
+                    Routing
+                </h1>
+                <div class="mover center">
+                    <div class="left-mover">
+                        <!-- class="not-active" -->
+                        <a href="/lessons/lec2/les-6.html">
+                            <i class="icofont-bubble-left"></i>
+                        </a>
+                    </div>
+                    <div class="middle-mover">
+                        <div class="les">
+                            <a class="big-num" href="/lessons/lec2/les-1.html">01</a>
+                            <a class="big-num" href="/lessons/lec2/les-2.html">02</a>
+                            <a class="big-num" href="/lessons/lec2/les-3.html">03</a>
+                            <a class="big-num" href="/lessons/lec2/les-4.html">04</a>
+                            <a class="big-num" href="/lessons/lec2/les-5.html">05</a>
+                            <a class="big-num" href="/lessons/lec2/les-6.html">06</a>
+                            <a class="big-num cur" href="/lessons/lec2/les-7.html">07</a>
+                            <a class="big-num" href="/lessons/lec2/les-8.html">08</a>
+                            <a class="big-num" href="/lessons/lec2/les-9.html">09</a>
+                            <a class="big-num" href="/lessons/lec2/les-10.html">10</a>
+                            <a class="big-num" href="/lessons/lec2/les-11.html">11</a>
+                            <a class="big-num" href="/lessons/lec2/les-12.html">12</a>
+                            <a class="big-num" href="/lessons/lec2/les-13.html">13</a>
+                        </div>
+                    </div>
+                    <div class="right-mover">
+                        <a href="/lessons/lec2/les-8.html">
+                            <i class="icofont-bubble-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="content container">
+            <h1 class="question">
+                <span class="question-q">Q1:</span> What is the use of <i class="icofont-rounded-double-left orangee"></i> Routes <i class="icofont-rounded-double-right orangee"></i> ?
+            </h1>
+            <h3 class="question-answer">
+                <div class="qd-c"><span class="qd">-</span> routes are used for having link for each spearated page like :<br /></div>
+                <div class="q2d-c"><span class="q2d">--</span> 127.0.0.1:8000<br /></div>
+                <div class="q2d-c"><span class="q2d">--</span> 127.0.0.1:8000/overview<br /></div>
+                <div class="q2d-c"><span class="q2d">--</span> 127.0.0.1:8000/products<br /></div>
+                <div class="qd-c"><span class="qd">BUT</span> If you try to open a folder by using 127.0.0.1:8000/txt it will not work<br /></div>
+                <div class="qd-c"><span class="sol">- Solution</span> : Making <span class="qooute" data-content="Route"></span> for /txt in our App</div>
+            </h3>
+            <h1 class="question">
+                <span class="question-q">Q2:</span> How To implement <i class="icofont-rounded-double-left orangee"></i> Routes <i class="icofont-rounded-double-right orangee"></i> ?
+            </h1>
+            <h3 class="question-answer">
+                <div class="qd-c"><span class="qd">-</span> there are two ways for implementing routes :<br /></div>
+                <div class="q2d-c"><span class="q2d">--</span> Very Simple Applications : Using NodeJS <span class="qooute" data-content="If & Else Conditions"></span> <br /></div>
+                <div class="q2d-c"><span class="q2d">--</span> Complex Appliciations : Using <span class="qooute" data-content="Express"></span> <br /></div>
+            </h3>
+            <h1 class="question">
+                <span class="question-q">@</span> let's start Writing some simple <i class="icofont-rounded-double-left orangee"></i> Routes <i class="icofont-rounded-double-right orangee"></i> using
+                NodeJS.
+            </h1>
+
+            <h3 class="question-answer">
+                <div class="qd-c"><span class="qd">-</span> Let's Make some simple routes like :<br /></div>
+                <div class="q2d-c"><span class="q2d">--</span> / <br /></div>
+                <div class="q2d-c"><span class="q2d">--</span> /overview <br /></div>
+                <div class="q2d-c"><span class="q2d">--</span> /products <br /></div>
+                <div class="editor" data-file="app.js">
+                    <div class="editor-body">
+                        1
+                        // start using http for Network operations
+                        2
+                        const http = require('http'); 
+                        3
+                        const Server = http.createServer( (req , res ) =&gt; { 
+                        4
+                        \tconst pathName = req.url; 
+                        5
+                        \tconsole.log(pathName); 
+                        6
+                        \tif (pathName == '/' || pathName =="/overview") {
+                        7
+                        \t\tres.end("This is overview !"); 
+                        8
+                        \t} 
+                        9
+                        \telse if (pathName == "/products") { 
+                        10
+                        \t\tres.end("This is products !"); 
+                        11
+                        \t}
+                        12
+                        \telse { 
+                        13
+                        \t\tres.writeHead(404 , { 
+                        14
+                        \t\t\t'Content-Type' : 'text/html', 
+                        15
+                        \t\t\t'My-Own-Header': 'hello-from-nodejs' 
+                        16
+                        \t\t});
+                        17
+                        \t\tres.end("&lt;h1&gt; Page not found !&lt;/h1&gt;" ); 
+                        18
+                        \t} 
+                        19
+                        }); 
+                        20 
+                        Server.listen("8000", "127.0.0.1" , () =&gt; { 
+                        21
+                        \tconsole.log("Listening on port 8000!");
+                        22
+                        }); 
+                    </div>
+                </div>
+                <div class="terminal">
+                    <div class="terminal-body">
+                        [elhosen@elhosen-fedora ~]$ node app.js <br>
+                        Listening on port 8000! <br />
+                        / <br />
+                        /favicon.ico <br />
+                        /overview <br />
+                        /products <br />
+                        |
+                    </div>
+                </div>
+                <div class="qd-c">
+                    <span class="qd">Note :</span> We used <span class="qooute" data-content="res.wrtieHead( statusCode , options )"></span> function for Sending headers in the
+                    <span class="qooute" data-content="res"></span> Object.
+                </div>
+                <div class="qd-c">
+                    <span class="qd">Note :</span> We could have used <span class="qooute" data-content="url"></span> library instead of 
+                    <span class="qooute" data-content="pathName"></span> for more Control in the url.
+                    <div class="q2d-c">
+                        <span class="q2d">--</span>
+                        for a url like this : 127.0.0.1:8000/porduct?id=5
+                        <br>
+                        \t
+                        if we use <span class="qooute" data-content="req.url"></span> it will return /porduct?id=5
+                        <br>
+                        \t
+                        how to manage this ? Simply using <span class="qooute" data-content="url"></span> library.
+                    </div>
+                </div>
+                <div class="editor" data-file="app.js">
+                    <div class="editor-body">
+                        1
+                        // start using http for Network operations
+                        2
+                        const http = require('http'); 
+                        3
+                        const Server = http.createServer((req , res ) =&gt; { 
+                        4
+                        \t
+                        const {pathname , query} = url.parse(req.url) ; 
+                        5
+                        \t
+                        console.log( pathname , query ); 
+                        19
+                        }); 
+                        20
+                        Server.listen( "8000" , "127.0.0.1" , () =&gt; { 
+                        21
+                        \tconsole.log("Listening on port 8000!");
+                        22
+                        }); 
+                    </div>
+                </div>
+                <div class="terminal">
+                    <div class="terminal-body">
+                        [elhosen@elhosen-fedora ~]$ node app.js <br />
+                        Listening on port 8000! <br />
+                        /product id=0 <br />
+                        |
+                    </div>
+                </div>
+            </h3>
+        </main>
+    </body>
+</html>

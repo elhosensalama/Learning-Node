@@ -1,0 +1,73 @@
+.navbar .container {
+    padding: 20px 0;
+}
+
+.navbar .container .logo {
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.navbar .container .logo i {
+    font-size: 2.2rem;
+    margin-right: 5px;
+    color: var(--orange);
+}
+
+.navbar .container ul {
+    list-style: none;
+}
+
+.navbar .container ul li,
+.navbar .container ul li button {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.navbar .container ul li {
+    color: var(--nice-white);
+    margin-right: 35px;
+    transform: scale(1.2);
+}
+
+.navbar .container ul li button {
+    padding: 8px 25px;
+    background: transparent;
+    color: inherit;
+    border-radius: 50px;
+    border: 1px solid var(--nice-white);
+    cursor: pointer;
+}
+
+.navbar .container ul li.search-box {
+    margin-left: 10px;
+    position: relative;
+}
+
+.navbar .container ul li.search-box i {
+    position: absolute;
+    top: 50%;
+    transform: translate(-37px, -50%);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    padding: 9px;
+}
+
+.navbar .container ul li.search-box input.squize {
+    width: 0;
+    border-radius: 50%;
+    padding: 0;
+    border: none;
+    margin-left: 25px;
+}
+
+.navbar .container ul li.search-box input {
+    background-color: transparent;
+    color: inherit;
+    border: 1px solid var(--nice-white);
+    border-radius: 50px;
+    padding: 8px 25px;
+    outline: none;
+    font-size: 14px;
+    transition: 0.2s all ease-in-out;
+}

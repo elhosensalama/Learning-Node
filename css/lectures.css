@@ -1,0 +1,43 @@
+.header-body {
+    height: 60vh;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 80vw;
+    margin: 0 auto;
+}
+.header-body .heading-primary i{
+    font-size: 15rem;
+}
+
+.section-lessons {
+    min-height: 30vh;
+    padding: 100px 0;
+    text-align: center;
+}
+.section-lessons > div{
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+.section-lessons .lessons-heading{
+    font-size: 45px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-family: "Times";
+    font-weight: normal;
+    border-bottom: 4px solid var(--orange);
+    padding: 10px 35px;
+    border-radius: 50px;
+    border-bottom-left-radius: 10%;
+    display: inline;
+}
+.section-lessons .lesson{
+    background-color: transparent;
+    color: #ccc;
+    padding: 15px 30px;
+    border-radius: 100px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    /* margin: 20px auto; */
+    margin: 20px;
+    border: 1px solid #111;
+    font-size: 18px;
+
+}

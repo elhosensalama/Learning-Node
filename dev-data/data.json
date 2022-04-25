@@ -1,0 +1,51 @@
+[
+    {
+        "id": 0,
+        "name": "The Forest Hiker",
+        "duration": 5,
+        "price": 397,
+        "summary": "Breathtaking hike through the Canadian Banff National Park",
+        "image": "tour-1-cover.jpg"
+    },
+    {
+        "id": 1,
+        "name": "The Sea Explorer",
+        "duration": 7,
+        "price": 497,
+        "summary": "Exploring the jaw-dropping US east coast by foot and by boat",
+        "image": "tour-2-cover.jpg"
+    },
+    {
+        "id": 2,
+        "name": "The Snow Adventurer",
+        "duration": 4,
+        "price": 997,
+        "summary": "Exciting adventure in the snow with snowboarding and skiing",
+        "image": "tour-3-cover.jpg"
+    },
+    {
+        "id": 3,
+        "name": "The City Wanderer",
+        "duration": 9,
+        "price": 1197,
+        "summary": "Living the life of Wanderlust in the US' most beatiful cities",
+        "image": "tour-4-cover.jpg"
+        
+    },
+    {
+        "id": 4,
+        "name": "The Park Camper",
+        "duration": 10,
+        "price": 1497,
+        "summary": "Breathing in Nature in America's most spectacular National Parks",
+        "image": "tour-5-cover.jpg"
+    },
+    {
+        "id": 5,
+        "name": "The Sports Lover",
+        "duration": 14,
+        "price": 2997,
+        "summary": "Surfing, skating, parajumping, rock climbing and more, all in one tour",
+        "image": "tour-6-cover.jpg"
+    }
+]

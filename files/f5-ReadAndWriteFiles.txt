@@ -1,0 +1,16 @@
+## Reading and Writing in Files.
+
+* We use the fs Librariy for files control
+
+    - For Synchronous Reading and Writing we use
+
+        -- fs.readFileSync( path , encoding )
+
+            : const in = fs.readFileSync('./txt/input.txt', 'utf-8');
+            console.log(in);
+
+        -- fs.writeFileSync( path , data )
+
+            : const out = `this is ${input}`;
+            fs.writeFileSync('./txt/output.txt', out);
+        

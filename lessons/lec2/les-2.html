@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Learning NodeJS</title>
+        <link rel="stylesheet" href="../../css/icofont.min.css" />
+        <link rel="stylesheet" href="../../css/style.css" />
+        <link rel="stylesheet" href="../../css/navbar.css" />
+        <link rel="stylesheet" href="../../css/lectures.css" />
+        <link rel="stylesheet" href="../../css/lessons.css" />
+        <link rel="shortcut icon" href="#" type="image/x-icon" />
+        <script defer src="../../js/script.js"></script>
+        <script defer src="../../js/editor.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="container center">
+                    <a class="logo" href="/">
+                        <div class="center">
+                            <i class="icofont-bird"></i>
+                            <h1><span class="orangee">N</span>odeJS</h1>
+                        </div>
+                    </a>
+                    <ul class="center">
+                        <li><a href="/#article">Lectures</a></li>
+                        <li><a href="/#questions">Questions</a></li>
+                        <li><a href="/#contact-us">Contact Us</a></li>
+                        <li><a href="/about-us.html">About Us</a></li>
+                        <li><a href="/login.html">login</a></li>
+                        <li>
+                            <a href="/signup.html"><button class="orangee">Sign Up</button></a>
+                        </li>
+                        <li class="search-box">
+                            <form action="" method="post">
+                                <input type="text" placeholder="search" class="squize" />
+                                <i class="icofont-search"></i>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="header-body center">
+                <h1 class="heading-primary">
+                    <a href="/lectures/lec2.html" class="btn-white">Introduction to NodeJS and NPM</a>
+                    <br />
+                    <br />
+
+                    Lesson 2
+                    <br />
+                    Use Node in a JS File
+                </h1>
+                <div class="mover center">
+                    <div class="left-mover">
+                        <!-- class="not-active" -->
+                        <a href="/lessons/lec2/les-1.html" >
+                            <i class="icofont-bubble-left"></i>
+                        </a>
+                    </div>
+                    <div class="middle-mover">
+                        <div class="les">
+                            <a class="big-num" href="/lessons/lec2/les-1.html">01</a>
+                            <a class="big-num cur" href="/lessons/lec2/les-2.html">02</a>
+                            <a class="big-num" href="/lessons/lec2/les-3.html">03</a>
+                            <a class="big-num" href="/lessons/lec2/les-4.html">04</a>
+                            <a class="big-num" href="/lessons/lec2/les-5.html">05</a>
+                            <a class="big-num" href="/lessons/lec2/les-6.html">06</a>
+                            <a class="big-num" href="/lessons/lec2/les-7.html">07</a>
+                            <a class="big-num" href="/lessons/lec2/les-8.html">08</a>
+                            <a class="big-num" href="/lessons/lec2/les-9.html">09</a>
+                            <a class="big-num" href="/lessons/lec2/les-10.html">10</a>
+                            <a class="big-num" href="/lessons/lec2/les-11.html">11</a>
+                            <a class="big-num" href="/lessons/lec2/les-12.html">12</a>
+                            <a class="big-num" href="/lessons/lec2/les-13.html">13</a>
+                        </div>
+                    </div>
+                    <div class="right-mover">
+                        <a href="/lessons/lec2/les-3.html">
+                            <i class="icofont-bubble-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="content container">
+            <h1 class="question"><span class="question-q">@</span> Resfresh on Using Terminal</h1>
+
+            <h3 class="question-answer">
+                <div class="qd-c"><span class="qd">-</span> make <span class="qooute" data-content="index.js"></span> file :<br /></div>
+                <div class="terminal">
+                    <div class="terminal-body">
+                        [elhosen@elhosen-fedora ~]$ touch index.js <br>
+                        [elhosen@elhosen-fedora ~]$ 
+                    </div>
+                </div>
+                <div class="qd-c"><span class="qd">-</span> write a couple of Code's lines the index.js file :<br /></div>
+                <div class="editor" data-file="app.js">
+                    <div class="editor-body">
+                        1
+                        // This is a simple printing Prgram
+                        2
+                        const hello = "Hello World"; 
+                        3
+                        console.log(hello);
+                    </div>
+                </div>
+                <div class="qd-c"><span class="qd">-</span> write <span class="qooute" data-content="node index.js"></span> in Terminal & Hello World will be Printed <br /></div>
+                <div class="terminal">
+                    <div class="terminal-body">
+                        [elhosen@elhosen-fedora ~]$ node index.js <br>
+                        Hello World <br>
+                        [elhosen@elhosen-fedora ~]$ 
+                    </div>
+                </div>
+                <!-- <div class="q2d-c"><span class="q2d">--</span> show Global Variables of Node Using <span class="qooute" data-content="TAB"></span> <br /></div> -->
+                <h1 class="question"><span class="question-q">@</span> Writing a more complex program</h1>
+
+                <h3 class="question-answer">
+                    <div class="qd-c"><span class="qd">-</span> write the following Code in <span class="qooute" data-content="index.js"></span> file :<br /></div>
+                    <div class="editor" data-file="app.js">
+                        <div class="editor-body">
+                            1
+                            // This is a little more complex Prgram
+                            2
+                            const fs = require('fs');
+                            3
+                            const repl = require('repl');
+                            4
+                            const hello = "Hello World";
+                            5
+                            console.log(hello);
+                            6
+                            fs.readFile();
+                        </div>
+                    </div>
+                    <div class="qd-c"><span class="qd">-</span> The <span class="qooute" data-content="require"></span> keyword is used for implementing Node Libraries into Our Project.<br /></div>
+                    <div class="qd-c"><span class="qd">-</span> The <span class="qooute" data-content="fs"></span> stands for FileSystem.<br /></div>
+                    <div class="qd-c"><span class="qd">-</span> The <span class="qooute" data-content="REPL"></span> stands for Read-Eval-Print-Loop<br /></div>
+                </h3>
+            </h3>
+        </main>
+    </body>
+</html>
