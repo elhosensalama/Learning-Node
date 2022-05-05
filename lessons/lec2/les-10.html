@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Learning NodeJS</title>
+        <link rel="stylesheet" href="../../css/icofont.min.css" />
+        <link rel="stylesheet" href="../../css/style.css" />
+        <link rel="stylesheet" href="../../css/navbar.css" />
+        <link rel="stylesheet" href="../../css/lectures.css" />
+        <link rel="stylesheet" href="../../css/lessons.css" />
+        <link rel="shortcut icon" href="/imgs/node-js2.svg" type="image/x-icon" />
+        <script defer src="../../js/button-navigator.js"></script>
+        <script defer src="../../js/script.js"></script>
+        <script defer src="../../js/editor.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="container center">
+                    <a class="logo" href="/">
+                        <div class="center">
+                            <i class="icofont-bird"></i>
+                            <h1><span class="orangee">N</span>odeJS</h1>
+                        </div>
+                    </a>
+                    <ul class="center">
+                        <li><a href="/#article">Lectures</a></li>
+                        <li><a href="/#questions">Questions</a></li>
+                        <li><a href="/#contact-us">Contact Us</a></li>
+                        <li><a href="/about-us.html">About Us</a></li>
+                        <li><a href="/login.html">login</a></li>
+                        <li>
+                            <a href="/signup.html"><button class="orangee">Sign Up</button></a>
+                        </li>
+                        <li class="search-box">
+                            <form action="" method="post">
+                                <input type="text" placeholder="search" class="squize" />
+                                <i class="icofont-search"></i>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="header-body center">
+                <h1 class="heading-primary">
+                    <a href="/lectures/lec2.html" class="btn-white">Introduction to NodeJS and NPM</a>
+                    <br />
+                    <br />
+
+                    Lesson 10
+                    <br />
+                    Handling Packages Using NPM
+                </h1>
+                <div class="mover center">
+                    <div class="left-mover">
+                        <a href="/lessons/lec2/les-9.html">
+                            <i class="icofont-bubble-left"></i>
+                        </a>
+                    </div>
+                    <div class="middle-mover">
+                        <div class="les">
+                            <a class="big-num" href="/lessons/lec2/les-1.html">01</a>
+                            <a class="big-num" href="/lessons/lec2/les-2.html">02</a>
+                            <a class="big-num" href="/lessons/lec2/les-3.html">03</a>
+                            <a class="big-num" href="/lessons/lec2/les-4.html">04</a>
+                            <a class="big-num" href="/lessons/lec2/les-5.html">05</a>
+                            <a class="big-num" href="/lessons/lec2/les-6.html">06</a>
+                            <a class="big-num" href="/lessons/lec2/les-7.html">07</a>
+                            <a class="big-num" href="/lessons/lec2/les-8.html">08</a>
+                            <a class="big-num" href="/lessons/lec2/les-9.html">09</a>
+                            <a class="big-num cur" href="/lessons/lec2/les-10.html">10</a>
+                            <a class="big-num" href="/lessons/lec2/les-11.html">11</a>
+                        </div>
+                    </div>
+                    <div class="right-mover">
+                        <!-- class="not-active" -->
+                        <a href="/lessons/lec2/les-11.html">
+                            <i class="icofont-bubble-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="content container">
+            
+            <h1 class="question"><span class="question-q">@ </span> Let's start Installing some Packages using <span class="qooute" data-content="NPM"></span>.</h1>
+            <h3 class="question-answer">
+                <div class="qd-c"><span class="qd">-</span> when we want to install a package on the local project.<br /></div>
+                <div class="q2d-c"><span class="qd">--</span> we use <span class="qooute" data-content="npm install 'package name' --save"></span>. <br>
+                    <span class="tab"></span><span class="tab"></span> where ` --save ` is optional & ` install ` have shortcut ` i `.<br /></div>
+                <div class="terminal">
+                    <div class="terminal-body">
+                        [elhosen@elhosen-fedora ~]$ npm install slugify <br />
+                        npm Pla Pla Pla... <br>
+                        npm <span class="warn">WARN</span> Pla Pla Pla... <br>
+                        <span class="darkmagenta">+ slugify@1.2.3</span> <br>
+                        added 1 package from 1 contributer and audited 1 package in 0.64s <br>
+                        found <span class="num">0</span> vulnerabilites <br><br>
+                        [elhosen@elhosen-fedora ~]$
+                    </div>
+                </div>
+                <div class="q2d-c"><span class="qd">--</span> now we will have a new property called <span class="qooute" data-content="dependencies"></span>.<br /></div>
+                
+                <div class="editor" data-file="package.json" data-lang="json">
+                    <div class="editor-body">
+                        1
+                        {
+                        2
+                        \t"name": "learning-node",
+                        3
+                        \t"version": "1.0.0",
+                        4
+                        \t"description": "this is a sample project for helping peaple to get started on making there own apps",
+                        5
+                        \t"main": "app.js",
+                        6
+                        \t"scripts": {
+                        7
+                            \t\t"test": "echo \'Error: no test specified\' && exit 1"
+                        8
+                        \t},
+                        9
+                        \t"author": "elhosen salama",
+                        10
+                        \t"license": "ISC",
+                        11
+                        \t"dependencies": {
+                        12
+                            \t\t"slugify": "^1.2.3"
+                        13
+                        \t},
+                        14
+                        }
+                    </div>
+                </div>
+
+                <div class="qd-c"><span class="qd">-</span> when we want to install an only development package on the local project.<br /></div>
+                <div class="q2d-c"><span class="qd">--</span> we use <span class="qooute" data-content="npm install 'package name' --save-dev"></span>.<br /></div>
+                <div class="terminal">
+                    <div class="terminal-body">
+                        [elhosen@elhosen-fedora ~]$ npm install nodemon --save-dev <br />
+                        npm Pla Pla Pla... <br>
+                        npm <span class="warn">WARN</span> Pla Pla Pla... <br>
+                        <span class="darkmagenta">+ nodemon@2.0.5</span> <br>
+                        added 291 package from 145 contributer and audited 2237 package in 1.52s <br>
+                        found <span class="num">0</span> vulnerabilites <br><br>
+                        [elhosen@elhosen-fedora ~]$
+                    </div>
+                </div>
+                <div class="q2d-c"><span class="qd">--</span> now we will have a new property called <span class="qooute" data-content="devDependencies"></span>.<br /></div>
+                
+                <div class="editor" data-file="package.json" data-lang="json">
+                    <div class="editor-body">
+                        1
+                        {
+                        2
+                        \t"name": "learning-node",
+                        3
+                        \t"version": "1.0.0",
+                        4
+                        \t"description": "this is a sample project for helping peaple to get started on making there own apps",
+                        5
+                        \t"main": "app.js",
+                        6
+                        \t"scripts": {
+                        7
+                            \t\t"test": "echo \'Error: no test specified\' && exit 1"
+                        8
+                        \t},
+                        9
+                        \t"author": "elhosen salama",
+                        10
+                        \t"license": "ISC",
+                        11
+                        \t"dependencies": {
+                        12
+                            \t\t"slugify": "^1.2.3"
+                        13
+                        \t},
+                        14
+                        \t"devDependencies": {
+                        15
+                            \t\t"nodemon": "^2.0.5"
+                        16
+                        \t},
+                        17
+                        }
+                    </div>
+                </div>
+                <div class="qd-c"><span class="qd">-</span> But if we want to install a package for development on the Device not just the project.<br /></div>
+                <div class="q2d-c"><span class="qd">--</span> we use <span class="qooute" data-content="npm install 'package name' --global"></span>. <br>
+                    <span class="tab"></span><span class="tab"></span> where ` --global ` have shortcut ` -g `.<br /></div>
+                <div class="terminal">
+                    <div class="terminal-body">
+                        [elhosen@elhosen-fedora ~]$ npm install nodemon --global <br />
+                        npm Pla Pla Pla... <br>
+                        npm <span class="warn">WARN</span> Pla Pla Pla... <br>
+                        <span class="darkmagenta">+ nodemon@2.0.5</span> <br>
+                        added 291 package from 145 contributer and audited 2237 package in 1.52s <br>
+                        found <span class="num">0</span> vulnerabilites <br><br>
+                        [elhosen@elhosen-fedora ~]$
+                    </div>
+                </div>
+                <div class="q2d-c"><span class="qd">--</span> now nodemon is gloabl and we don't have to install it in every project we make.</div>
+                <div class="qd-c">
+                    <span class="qd">Note 1 :</span> We used <span class="qooute" data-content="slugify"></span> library which is used for making a good looking urls.
+                </div>
+                <div class="qd-c">
+                    <span class="qd">Note 2 :</span> We used <span class="qooute" data-content="nodemon"></span> library which is used for monitoring the project for any change in its files.
+                </div>
+                <div class="qd-c">
+                    <span class="qd">Note 3 :</span> gloabl packages can simply be used from the terminal.
+                    
+                    <div class="terminal">
+                        <div class="terminal-body">
+                            [elhosen@elhosen-fedora ~]$ nodemon app.js <br />
+                            <span class="yellow">
+                                [nodemon] 2.0.5 <br>
+                                [nodemon] to restart at any time, enter `rs` <br>
+                                [nodemon] watching path(s): *.* <br>
+                                [nodemon] watching extensions: js,mjs,json <br>
+                            </span>
+                            <span class="green">
+                                [nodemon] starting `node app.js` <br>
+                            </span>
+                            Hello world <br>
+                            Listening on port 8000! <br>
+                            [elhosen@elhosen-fedora ~]$
+                        </div>
+                    </div>
+                </div>
+                <div class="qd-c">
+                    <span class="qd">Note 4 :</span> for using devDependencies packages we need to make scripts for them in the package.json file.
+                    <div class="editor" data-file="package.json" data-lang="json">
+                        <div class="editor-body">
+                            1
+                            {
+                            2
+                            \t"scripts" : {
+                            3
+                            \t\t"start" : "nodemon app.js"
+                            4
+                            \t}
+                            5
+                            }
+                        </div>
+                    </div>
+                    <div class="q2d-c">
+                        <span class="qd">--</span>
+                        now we can simply use <span class="qooute" data-content="npm run 'script'"></span> and the 'script' in our case is `start`. <br>
+                        And `start` is the default for development so we can just use 'npm start'.
+                    </div>
+                    <div class="terminal">
+                        <div class="terminal-body">
+                            [elhosen@elhosen-fedora ~]$ npm run start <br />
+                            <br>
+                            &gt; learning-node@1.0.0 start <br>
+                            &gt; nodemon app.js <br> 
+                            <br>
+                            <span class="yellow">
+                                [nodemon] 2.0.5 <br>
+                                [nodemon] to restart at any time, enter `rs` <br>
+                                [nodemon] watching path(s): *.* <br>
+                                [nodemon] watching extensions: js,mjs,json <br>
+                            </span>
+                            <span class="green">
+                                [nodemon] starting `node app.js` <br>
+                            </span>
+                            Hello world <br>
+                            Listening on port 8000! <br>
+                            |
+                        </div>
+                    </div>
+                </div>
+            </h3>
+            <h1 class="question"><span class="question-q">@ </span> More Operations on Packages using <span class="qooute" data-content="NPM"></span>.</h1>
+            <h3 class="question-answer">
+                <div class="qd-c"><span class="qd">-</span> when we want to check what are the packages which need to be updated.<br /></div>
+                <div class="q2d-c"><span class="qd">--</span> we use <span class="qooute" data-content="npm outdated"></span>. <br> </div>
+                <div class="terminal">
+                    <div class="terminal-body">
+                        [elhosen@elhosen-fedora ~]$ npm outdated <br />
+                        <span style="text-decoration: underline;">Package</span>
+                        <span style="text-decoration: underline;">Current</span>
+                        <span style="text-decoration: underline;">Wanted</span>
+                        <span style="text-decoration: underline;">Latest</span>
+                        <span style="text-decoration: underline;">Location <br></span>
+                        &nbsp;&nbsp;<span class="red">slugify</span>&nbsp;&nbsp;&nbsp;&nbsp; 1.0.0 &nbsp;&nbsp;&nbsp;<span class="green">1.0.2</span> &nbsp;&nbsp;&nbsp;<span class="darkmagenta">1.3.4</span> &nbsp;&nbsp;learning-node <br>
+                        [elhosen@elhosen-fedora ~]$
+                    </div>
+                </div>
+                <div class="q2d-c"><span class="qd">Note : </span> package like this slugify@1.2.5 this three numbers have meaning.<br />
+                    <div class="q2d-c">
+                        <span class="qd">:</span> ` 1 ` is the version and when it chnages, old versions code will make <span class="sol"><span class="qd">Bugs</span></span>. <br>
+                        <span class="qd">:</span> ` 2 ` is the number of add new features and when it chnages, old code will work <span class="sol">Fine</span>.<br>
+                        <span class="qd">:</span> ` 5 ` is the number of fixed bugs and when it chnages, old code will work <span class="sol">Fine Too</span>.<br>
+                    </div>
+                </div>
+                <div class="qd-c">
+                    <span class="qd">-</span> when we want to updated an outdated package.
+                </div>
+                <div class="q2d-c">
+                    <span class="qd">--</span> we use <span class="qooute" data-content="npm update 'package name'"></span>
+                </div>
+                <div class="terminal">
+                    <div class="terminal-body">
+                        [elhosen@elhosen-fedora ~]$ npm update slugify <br />
+                        npm Pla Pla Pla... <br>
+                        npm <span class="warn">WARN</span> Pla Pla Pla... <br>
+                        <span class="darkmagenta">+ slugify@1.3.4</span> <br>
+                        added 1 package from 1 contributer and audited 2237 package in 0.32s <br>
+                        found <span class="num">0</span> vulnerabilites <br>
+                        [elhosen@elhosen-fedora ~]$
+                    </div>
+                </div>
+                <div class="qd-c">
+                    <span class="qd">-</span> when we want to uninstall a package.
+                </div>
+                <div class="q2d-c">
+                    <span class="qd">--</span> we use <span class="qooute" data-content="npm uninstall 'package name'"></span>
+                </div>
+                <div class="terminal">
+                    <div class="terminal-body">
+                        [elhosen@elhosen-fedora ~]$ npm uninstall slugify <br />
+                        npm Pla Pla Pla... <br>
+                        npm <span class="warn">WARN</span> Pla Pla Pla... <br>
+                        removed 1 package and audited 2237 package in 0.32s <br>
+                        found <span class="num">0</span> vulnerabilites <br>
+                        [elhosen@elhosen-fedora ~]$
+                    </div>
+                </div
+                ><div class="qd-c">
+                    <span class="qd">-</span> when we want to install all packages on deferent device.
+                </div>
+                <div class="q2d-c">
+                    <span class="qd">--</span> we use <span class="qooute" data-content="npm install"></span>.
+                </div>
+                <div class="terminal">
+                    <div class="terminal-body">
+                        [elhosen@elhosen-fedora ~]$ npm install <br />
+                        npm Pla Pla Pla... <br>
+                        npm <span class="warn">WARN</span> Pla Pla Pla... <br>
+                        added 259 package from 195 contributer and audited 2237 package in 2.62s <br>
+                        found <span class="num">0</span> vulnerabilites <br>
+                        [elhosen@elhosen-fedora ~]$
+                    </div>
+                </div>
+            </h3>
+        </main>
+    </body>
+</html>

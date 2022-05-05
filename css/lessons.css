@@ -89,7 +89,8 @@ a.link {
 }
 
 .terminal {
-    width: 800px;
+    min-width: 800px;
+    width: max-content;
     background-color: rgba(0, 0, 0, 0.4);
     border: 1px solid #000;
     margin: 50px;
@@ -119,6 +120,29 @@ a.link {
     padding: 5px;
     user-select: text;
 }
+.terminal .terminal-body .error{
+    color: black;
+    background-color: red;
+}
+.terminal .terminal-body .warn{
+    color: black;
+    background-color: yellow;
+}
+.terminal .terminal-body .red{
+    color: red;
+}
+.terminal .terminal-body .yellow{
+    color: yellow;
+}
+.terminal .terminal-body .green{
+    color: green;
+}
+.terminal .terminal-body .darkmagenta{
+    color: darkmagenta;
+}
+.terminal .terminal-body .num{
+    color: #37a08b;
+}
 
 .gray {
     color: rgb(35, 29, 51);
@@ -136,7 +160,8 @@ a.link {
 }
 
 .editor {
-    width: 800px;
+    min-width: 800px;
+    width: max-content;
     background-color: #1e1e1e;
     border: 1px solid #000;
     margin: 50px;

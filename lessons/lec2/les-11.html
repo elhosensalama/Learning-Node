@@ -49,21 +49,20 @@
                     <br />
                     <br />
 
-                    Lesson 2
+                    Lesson 11
                     <br />
-                    Use Node in a JS File
+                    Modules Types and How to use it
                 </h1>
                 <div class="mover center">
                     <div class="left-mover">
-                        <!-- class="not-active" -->
-                        <a href="/lessons/lec2/les-1.html" >
+                        <a href="/lessons/lec2/les-10.html">
                             <i class="icofont-bubble-left"></i>
                         </a>
                     </div>
                     <div class="middle-mover">
                         <div class="les">
                             <a class="big-num" href="/lessons/lec2/les-1.html">01</a>
-                            <a class="big-num cur" href="/lessons/lec2/les-2.html">02</a>
+                            <a class="big-num" href="/lessons/lec2/les-2.html">02</a>
                             <a class="big-num" href="/lessons/lec2/les-3.html">03</a>
                             <a class="big-num" href="/lessons/lec2/les-4.html">04</a>
                             <a class="big-num" href="/lessons/lec2/les-5.html">05</a>
@@ -72,11 +71,12 @@
                             <a class="big-num" href="/lessons/lec2/les-8.html">08</a>
                             <a class="big-num" href="/lessons/lec2/les-9.html">09</a>
                             <a class="big-num" href="/lessons/lec2/les-10.html">10</a>
-                            <a class="big-num" href="/lessons/lec2/les-11.html">11</a>
+                            <a class="big-num cur" href="/lessons/lec2/les-11.html">11</a>
                         </div>
                     </div>
                     <div class="right-mover">
-                        <a href="/lessons/lec2/les-3.html">
+                        <!-- class="not-active" -->
+                        <a class="not-active" href="/lessons/lec2/les-12.html">
                             <i class="icofont-bubble-right"></i>
                         </a>
                     </div>
@@ -84,60 +84,83 @@
             </div>
         </header>
         <main class="content container">
-            <h1 class="question"><span class="question-q">@</span> Resfresh on Using Terminal</h1>
-
+            
+            <h1 class="question"><span class="question-q">Q1 :</span> What is the three main types of <span class="qooute" data-content="Modules"></span>.</h1>
             <h3 class="question-answer">
-                <div class="qd-c"><span class="qd">-</span> make <span class="qooute" data-content="index.js"></span> file :<br /></div>
-                <div class="terminal">
-                    <div class="terminal-body">
-                        [elhosen@elhosen-fedora ~]$ touch index.js <br>
-                        [elhosen@elhosen-fedora ~]$ 
-                    </div>
+                <div class="qd-c"><span class="qd">-</span> First Type is : Built in Module (In NodeJS) like :<br />
                 </div>
-                <div class="qd-c"><span class="qd">-</span> write a couple of Code's lines the index.js file :<br /></div>
+                <div class="q2d-c"><span class="qd">--</span> the <span class="qooute" data-content="fs"></span> module =&gt; used to deal with files <br> </div>
+                <div class="q2d-c"><span class="qd">--</span> the <span class="qooute" data-content="url"></span> module =&gt; used to deal with the url and its params <br></div>
+                <div class="q2d-c"><span class="qd">--</span> the <span class="qooute" data-content="http"></span> module =&gt; used to create a server and monitor it <br></div>
+                
                 <div class="editor" data-file="app.js">
                     <div class="editor-body">
                         1
-                        // This is a simple printing Prgram
+                        const fs = require('fs');
                         2
-                        const hello = "Hello World"; 
+                        const url = require('url');
                         3
-                        console.log(hello);
+                        const http = require('http');
                     </div>
                 </div>
-                <div class="qd-c"><span class="qd">-</span> write <span class="qooute" data-content="node index.js"></span> in Terminal & Hello World will be Printed <br /></div>
+                <!--  -->
+                <div class="qd-c"><span class="qd">-</span> Second Type is : custom Module like :<br />
+                </div>
+                <div class="q2d-c"><span class="qd">--</span> the <span class="qooute" data-content="sayHello"></span> custom module which we build in the <a href="/lessons/lec2/les-8.html" style="color: var(--orange);text-decoration: underline;">lesson 8</a>. <br> </div>
+                <div class="editor" data-file="sayHelloModel.js">
+                    <div class="editor-body">
+                        1
+                        module.exports = (name) =&gt; {
+                        2
+                        \tconsole.log( "Hello " + name);
+                        3
+                        }
+                    </div>
+                </div>
+                <div class="editor" data-file="app.js">
+                    <div class="editor-body">
+                        1
+                        // start using the sayHello Function
+                        2
+                        const sayHello = require('./modules/sayHelloModel');
+                        3
+                        sayHello("Ahmed" );
+                        
+                    </div>
+                </div>
                 <div class="terminal">
                     <div class="terminal-body">
                         [elhosen@elhosen-fedora ~]$ node index.js <br>
-                        Hello World <br>
+                        Hello Ahmed <br>
                         [elhosen@elhosen-fedora ~]$ 
                     </div>
                 </div>
-                <!-- <div class="q2d-c"><span class="q2d">--</span> show Global Variables of Node Using <span class="qooute" data-content="TAB"></span> <br /></div> -->
-                <h1 class="question"><span class="question-q">@</span> Writing a more complex program</h1>
-
-                <h3 class="question-answer">
-                    <div class="qd-c"><span class="qd">-</span> write the following Code in <span class="qooute" data-content="index.js"></span> file :<br /></div>
-                    <div class="editor" data-file="app.js">
-                        <div class="editor-body">
-                            1
-                            // This is a little more complex Prgram
-                            2
-                            const fs = require('fs');
-                            3
-                            const repl = require('repl');
-                            4
-                            const hello = "Hello World";
-                            5
-                            console.log(hello);
-                            6
-                            fs.readFile();
-                        </div>
+                <!--  -->
+                <div class="qd-c"><span class="qd">-</span> Last Type is : 3rd Party Module (from NPM) like :<br />
+                </div>
+                <div class="q2d-c"><span class="qd">--</span> the <span class="qooute" data-content="slugify"></span> module =&gt; used to make the url make nice. <br> </div>
+                <div class="q2d-c"><span class="qd">--</span> the <span class="qooute" data-content="express"></span> module =&gt; used as a framewrok for NodeJS <br></div>
+                <div class="q2d-c"><span class="qd">--</span> the <span class="qooute" data-content="mongoose"></span> module =&gt; used as a DataBase framework for ease dealing with MongoDB <br></div>
+                
+                <div class="editor" data-file="app.js">
+                    <div class="editor-body">
+                        1
+                        const slugify = require('slugify');
+                        2
+                        const express = require('express');
+                        3
+                        const mongoose = require('mongoose');
+                        4
+                        console.log(slugify('Green Burger', { lower: true}))
                     </div>
-                    <div class="qd-c"><span class="qd">-</span> The <span class="qooute" data-content="require"></span> keyword is used for implementing Node Libraries into Our Project.<br /></div>
-                    <div class="qd-c"><span class="qd">-</span> The <span class="qooute" data-content="fs"></span> stands for FileSystem.<br /></div>
-                    <div class="qd-c"><span class="qd">-</span> The <span class="qooute" data-content="REPL"></span> stands for Read-Eval-Print-Loop<br /></div>
-                </h3>
+                </div>
+                <div class="terminal">
+                    <div class="terminal-body">
+                        [elhosen@elhosen-fedora ~]$ node index.js <br>
+                        green-burger <br>
+                        [elhosen@elhosen-fedora ~]$ 
+                    </div>
+                </div>
             </h3>
         </main>
     </body>

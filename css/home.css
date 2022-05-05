@@ -61,6 +61,18 @@ header {
 .header-body .right i{
     font-size: 30rem;
 }
+.header-body .left .now-btn {
+    padding: 10px 50px;
+    background: rgba(255,255,255,0.03);
+    color: var(--orange);
+    font-size: 30px;
+    border-radius: 100px;
+    border: 1px solid currentColor;
+    font-family: "Times New Roman";
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.5);
+    font-weight: bold;
+    margin-top: 30px;
+}
 
 /* End */
 

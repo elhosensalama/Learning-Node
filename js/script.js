@@ -21,6 +21,18 @@ if (searchBox) {
             document.querySelector(".search-box input").style.animation = " 0.5s fadeIn 1 linear";
         }
     });
+    searchBox.addEventListener("focusin", (e) => {
+        const elemtent = [...e.target.classList];
+        if (elemtent[0] == "icofont-search") {
+            console.log("in");
+        }
+    });
+    searchBox.addEventListener("focusout", (e) => {
+        const elemtent = [...e.target.classList];
+        if (elemtent[0] == "icofont-search") {
+            console.log("out");
+        }
+    });
 }
 
 const headerBody = document.querySelector(".header-body");

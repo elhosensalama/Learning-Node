@@ -1,4 +1,5 @@
 const editors_devs = editors || document.querySelectorAll(".editor");
+const terminals_devs = terminals || document.querySelectorAll(".terminal");
 
 const nodeWords = {
     libraries: [
@@ -52,104 +53,38 @@ const nodeWords = {
         "Reflect",
         "WebAssembly",
         "module",
-    ],
-    functions: [
-        "atob",
-        "btoa",
-        "clearInterval",
-        "clearTimeout",
-        "decodeURI",
-        "decodeURIComponent",
-        "encodeURI",
-        "encodeURIComponent",
-        "escape",
-        "eval",
-        "parseFloat",
-        "isFinite",
-        "isNaN",
-        "parseInt",
-        "queueMicrotask",
-        "setInterval",
-        "setTimeout",
-        "unescape",
-        "toString",
-    ],
-    property: [
-        "AggregateError",
-        "Atomics",
-        "BigInt",
-        "Buffer",
-        "FinalizationRegistry",
-        "Infinity",
-        "Math",
-        "JSON",
-        "NaN",
-        "Symbol",
-        "WeakRef",
-        "_",
-        "_error",
-        "assert",
-        "async_hooks",
-        "console",
-        "constants",
-        "crypto",
-        "cluster",
-        "buffer",
-        "child_process",
-        "clearImmediate",
-        "dgram",
-        "diagnostics_channel",
-        "dns",
-        "domain",
-        "events",
-        "fs",
-        "global",
-        "globalThis",
-        "http",
-        "http2",
-        "https",
-        "inspector",
-        "net",
-        "os",
-        "path",
-        "perf_hooks",
-        "performance",
-        "process",
-        "punycode",
-        "querystring",
-        "stream",
-        "string_decoder",
-        "sys",
-        "timers",
-        "tls",
-        "trace_events",
-        "tty",
-        "readline",
-        "repl",
-        "require",
-        "setImmediate",
-        "url",
-        "util",
-        "v8",
-        "vm",
-        "wasi",
-        "worker_threads",
-        "zlib",
-        "__proto__",
-        "hasOwnProperty",
-        "isPrototypeOf",
-        "propertyIsEnumerable",
-        "toLocaleString",
-        "valueOf",
-        "constructor",
-    ],
+    ]
 };
 
 let cvars = new Set(),
     lvars = new Set(),
     bvars = new Set(["fs", "http", "url", "module", "exports", ...nodeWords.libraries]);
 
-const changeColors = (output) => {
+const changeColorsJSON = (output) => {
+    // String
+    let i = 0;
+    output = output.replace(/"[^"]*"/g, (s,a,b,c) => {
+        if (i++%2==0)
+            return `<span class="variable">${s}</span>`;
+        else
+            return `<span class="string">${s}</span>`;
+    });
+    output = output.replace(/'[^']*'/g, (s) => `<span class="string">${s}</span>`);
+    output = output.replace(/`[^`]*`/g, (s) => `<span class="string">${s}</span>`);
+    // Counter
+    if (!isNaN(+output)) {
+        return output.replace(/\d+/g, (s) => (s != 1 ? `<br><span class="editor-counter">${s}</span>` : `<span class="editor-counter">${s}</span>`));
+    }
+    // Tab
+    else if (output.startsWith("\\t")) {
+        output = output.replace(/\\t/g, `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`);
+    }
+    // Numbers
+    output = output.replace(/\d+/g, (s) => `<span class="number">${s}</span>`);
+    return output;
+};
+
+const changeColorsJS = (output) => {
     // String
     output = output.replace(/"[^"]*"/g, (s) => `<span class="string">${s}</span>`);
     output = output.replace(/'[^']*'/g, (s) => `<span class="string">${s}</span>`);
@@ -164,13 +99,13 @@ const changeColors = (output) => {
     }
     // Tab
     else if (output.startsWith("\\t")) {
-        output = output.replace(/\\t/g, `<span class="tab"></span>`);
+        output = output.replace(/\\t/g, `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`);
     }
     // Functions
     output = output.replace(/ [A-Z][a-zA-Z]*\(/g, (s) => ` <span class="library-used">${s.slice(0, -1)}</span>(`);
     output = output.replace(/[a-z][a-zA-Z]*\(/g, (s) => `<span class="function">${s.slice(0, -1)}</span>(`);
     // like if
-    output = output.replace(/(for|if|else|return|while|switch|do)/g, (s) => `<span class="for">${s}</span>`);
+    output = output.replace(/(for |if |else |return |while |switch |do )/g, (s) => `<span class="for">${s}</span>`);
     // variables
     output.replace(/(\{|\()[ a-zA-Z\d,]+(\}|\))/g, (s) => {
         s.slice(1, -1)
@@ -212,6 +147,7 @@ const changeColors = (output) => {
 
 if (editors_devs) {
     editors_devs.forEach((editor) => {
+        const lang = editor.getAttribute("data-lang");
         cvars = new Set();
         lvars = new Set();
         const editor_body = [...editor.children].find((el) => el.classList == "editor-body");
@@ -221,9 +157,27 @@ if (editors_devs) {
             return x;
         });
         let html = "";
-        content.forEach((con) => {
-            if (con.length != 0) html += changeColors(con);
-        });
+        if (lang){
+            if (lang.toLowerCase() == "json"){
+                content.forEach((con) => {
+                    if (con.length != 0) html += changeColorsJSON(con);
+                });
+            }
+        }
+        else {
+            content.forEach((con) => {
+                if (con.length != 0) html += changeColorsJS(con);
+            });
+        }
         editor_body.innerHTML = html;
+    });
+}
+
+if (terminals_devs) {
+    terminals_devs.forEach((terminal) => {
+        const terminal_body = [...terminal.children].find((el) => el.classList == "terminal-body");
+        let content = terminal_body.innerHTML;
+        content = content.replace(/\\t/g, "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+        terminal_body.innerHTML = content;
     });
 }

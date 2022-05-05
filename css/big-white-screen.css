@@ -1,0 +1,123 @@
+.big-white-screen {
+    height: 90vh;
+    position: absolute;
+    left: 5vw;
+    width: 90vw;
+    border-bottom: 5vh solid transparent;
+    padding-bottom: 10px;
+}
+
+.big-white-screen .screen {
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    height: 100%;
+    position: relative;
+}
+
+.big-white-screen .fixed-background {
+    /* background-color: blueviolet; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+}
+
+.big-white-screen .fixed-background .client-server {
+    display: flex;
+    justify-content: space-between;
+    height: 180px;
+}
+
+.big-white-screen .fixed-background .client-server .server,
+.big-white-screen .fixed-background .client-server .client {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 180px;
+}
+
+.big-white-screen .fixed-background .client-server .server i,
+.big-white-screen .fixed-background .client-server .client i {
+    font-size: 35px;
+    margin-top: 5px;
+}
+
+.big-white-screen .fixed-background .client-server .client {
+    background-color: #4a994a;
+}
+
+.big-white-screen .fixed-background .client-server .server {
+    background-color: rgb(134, 185, 31);
+}
+
+.big-white-screen .nav-btns {
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 100px;
+}
+
+.big-white-screen .nav-btns .nav-btn.not-active {
+    color: gray;
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: default;
+}
+
+.big-white-screen .nav-btns .nav-btn {
+    background-color: var(--orange);
+    padding: 5px 20px;
+    border-radius: 5px;
+    user-select: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.big-white-screen .slides {
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.big-white-screen .slides .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: salmon; */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.big-white-screen .slides .slide .paragrav {
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 70%;
+    align-self: flex-end;
+    margin-bottom: 20px;
+    font-size: 18px;
+    min-height: 30px;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.big-white-screen {}
+
+.big-white-screen {}
+
+
+.big-white-screen .slide.hide {
+    display: none;
+}
+
+/* TODO */
+header {
+    display: none;
+}
+
+/*  */

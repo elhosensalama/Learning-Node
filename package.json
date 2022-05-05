@@ -1,0 +1,19 @@
+{
+  "name": "learning-node",
+  "version": "1.0.0",
+  "description": "this is a sample project for helping peaple to get started on making there own apps",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elhosensalama/Learning-Node.git"
+  },
+  "author": "elhosen salama",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elhosensalama/Learning-Node/issues"
+  },
+  "homepage": "https://github.com/elhosensalama/Learning-Node#readme"
+}

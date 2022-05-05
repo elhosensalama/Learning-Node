@@ -10,7 +10,8 @@
         <link rel="stylesheet" href="../../css/navbar.css" />
         <link rel="stylesheet" href="../../css/lectures.css" />
         <link rel="stylesheet" href="../../css/lessons.css" />
-        <link rel="shortcut icon" href="#" type="image/x-icon" />
+        <link rel="shortcut icon" href="/imgs/node-js2.svg" type="image/x-icon" />
+        <script defer src="../../js/button-navigator.js"></script>
         <script defer src="../../js/script.js"></script>
         <script defer src="../../js/editor.js"></script>
     </head>
@@ -72,8 +73,6 @@
                             <a class="big-num" href="/lessons/lec2/les-9.html">09</a>
                             <a class="big-num" href="/lessons/lec2/les-10.html">10</a>
                             <a class="big-num" href="/lessons/lec2/les-11.html">11</a>
-                            <a class="big-num" href="/lessons/lec2/les-12.html">12</a>
-                            <a class="big-num" href="/lessons/lec2/les-13.html">13</a>
                         </div>
                     </div>
                     <div class="right-mover">
@@ -97,9 +96,9 @@
                         2
                         const fs = require('fs'); 
                         3
-                        const in = fs.readFileSync('./txt/input.txt', 'utf-8'); 
+                        const input = fs.readFileSync('./txt/input.txt', 'utf-8'); 
                         4
-                        console.log(in);
+                        console.log(input);
                     </div>
                 </div>
                 <div class="terminal">
@@ -115,13 +114,13 @@
                         1
                         // start using some filesystem writing's operations
                         2
-                        const fs = require('fs'); 
+                        const fs = require('fs');
                         3
-                        const out = `this is ${in} from file2 output.txt` 
+                        const output = `this is ${input} from file2 output.txt` 
                         4
-                        fs.writeFileSync('./txt/output.txt', out); 
+                        fs.writeFileSync('./txt/output.txt', output); 
                         5
-                        console.log(out);
+                        console.log(output);
                     </div>
                 </div>
                 <div class="terminal">
